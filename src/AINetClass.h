@@ -87,7 +87,7 @@ public:
 	void trainNetwork(bool bSilent=false);
 	std::string getDataFileName();
 	std::vector<std::string> getErrorList();
-	std::vector<std::string> splitString(const std::string& s, const std::string& delimiter, const bool& removeEmptyEntries = false);
+	std::vector<std::string> splitString(const std::string& strInput, const std::string& strDelimiter);
 
 private:
 	// Constants
@@ -147,7 +147,6 @@ private:
 	// functions
 	std::string generateFileOutput(std::string& strFileContents);
 	std::string generateFileInput(std::string& strFileContents);
-	bool endsWith(const std::string& s, const std::string& suffix);
 	bool recalculateInputDataPullList();
 	bool throwFailure(std::string tmpError, bool doexit);
 	double getTrainingDataValue(unsigned int row, unsigned int column);
